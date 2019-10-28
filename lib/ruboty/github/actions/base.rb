@@ -16,6 +16,10 @@ module Ruboty
           message.robot.brain.data[NAMESPACE] ||= {}
         end
 
+        def default_access_token
+          ENV["GITHUB_ACCESS_TOKEN"]
+        end
+
         def body
           message[:description] || ""
         end
@@ -33,7 +37,7 @@ module Ruboty
         end
 
         def access_token
-          @access_token ||= access_tokens[sender_name]
+          @access_token ||= (access_tokens[sender_name] || default_access_token)
         end
 
         def client

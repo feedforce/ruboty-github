@@ -21,6 +21,7 @@ gem "ruboty-github"
 ## ENV
 ```
 GITHUB_BASE_URL - Pass GitHub base URL if needed (e.g. https://github.example.com)
+GITHUB_ACCESS_TOKEN - GitHub access token used as default
 ```
 
 ## Image
